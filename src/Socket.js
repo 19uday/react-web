@@ -17,14 +17,13 @@ render(){
 	
 	return(
 		
-			<tr>
-			   <td><h2><font color="white">{this.props.controllll.name}</font></h2></td>
-                  	
-		          <td><label className="switch">
-		            <input type="checkbox" checked={this.state.status} onChange={this.changes.bind(this)}></input>
-		            <span className="slider round"></span>
-		          </label></td>	
-			</tr>
+                        <div className="w3-row control">   <div className="w3-container w3-twothird"><h2><font color="white">{this.props.controllll.name}</font></h2></div>
+
+                          <label className="switch w3-container w3-third">
+                            <input type="checkbox" defaultChecked={this.state.status} onChange={this.changes.bind(this)}></input>
+                            <span className="slider round"></span>
+                          </label></div>
+
 		);
 }
 }

@@ -17,10 +17,10 @@ render(){
 
         return(
 
-                        <tr>
-                           <td><h2><font color="white">{this.props.controllll.name}</font></h2></td>
+                        <div className="w3-row control">
+                            <div className="w3-container w3-twothird"><h2><font color="white">{this.props.controllll.name}</font></h2></div>
 
-                          <td className="switch">
+                          <div className="switch w3-container w3-third">
                 <div className='slider'>
         <Slider
           min={0}
@@ -32,8 +32,10 @@ render(){
         />
         <div className='value'>{this.values}</div>
       </div>
-                         </td> 
-                        </tr>
+                         </div> 
+                        </div>
+
+
                 );
 }
 }

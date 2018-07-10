@@ -34,14 +34,15 @@ render(){
 
         return(
 
-                        <tr>
-                           <td><h2><font color="white">{this.props.controllll.name}</font></h2></td>
+                        <div className="w3-row control">   
+<div className="w3-container w3-twothird"><h2><font color="white">{this.props.controllll.name}</font></h2></div>
 
-                          <td><label className="switch">
+                          <label className="switch w3-container w3-third">
                             <input type="checkbox" defaultChecked={this.finalstate} onChange={this.changes.bind(this)}></input>
                             <span className="slider round"></span>
-                          </label></td> 
-                        </tr>
+                          </label></div>
+
+
                 );
 }
 }

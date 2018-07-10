@@ -42,8 +42,7 @@ this.setroom = this.setroom.bind(this);
     this.toggleMenu();
  
     console.log("clicked");
-    e.stopPropagation();
-  }
+e.stopPropagation();   }
  
   toggleMenu() {
       this.setState({
@@ -53,16 +52,17 @@ this.setroom = this.setroom.bind(this);
 
 setgroup(grp)
 {
-  this.setState({currentgroup:grp});
-  this.setState({vis:"true"});
+  this.state.currentgroup = grp;
+  this.state.vis = "true";
   console.log(this.state.currentgroup);
   console.log(this.state.vis);  
 }
 
 setroom(room){
-  this.setState({currentroom:room});
-  this.setState({visib:"true"});
+  this.state.currentroom = room;
+  this.state.visib = "true";
 console.log(this.state.currentroom);
+this.state.final = !this.state.final;
 }
 
 
@@ -194,7 +194,7 @@ funct.state.final = !funct.state.final;            }
                 <header className="align-center">
                   <h2><font color="white">myAlfred</font></h2>
                 </header>
-{this.state.visiblee && (<div className=" w3-container w3-third">
+{this.state.visiblee && (<div>
                       <div className="menubutton"><MenuButton handleMouseDown={this.handleMouseDown}/></div>
 
                         <div className="menuu"><Menu handleMouseDown={this.handleMouseDown}
@@ -203,12 +203,11 @@ funct.state.final = !funct.state.final;            }
           
                      
                     
-                    <div className="w3-container w3-third">
+                    <div>
                       { 
                         this.state.visib === "true" && 
                         <Controls controll={this.state.userControls} current={this.state.currentroom} currentg={this.state.currentgroup} socket={this.state.socket} key={this.state.final}/>            
                       }</div>
-		
                 </div> 
 
                     

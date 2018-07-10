@@ -6,8 +6,8 @@ class MenuButton extends Component {
   render() {
 
     return (
-<button id="roundButton"
-              onMouseDown={this.props.handleMouseDown}><span className="fa fa-bars"></span></button>
+<p
+              onMouseDown={this.props.handleMouseDown}><span className="fa fa-bars"></span></p>
 
      
     );

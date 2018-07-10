@@ -23,7 +23,7 @@ componentWillMount(){
 			this.state.grps.push(this.props.controls[i].group);
 		}
 	}console.log(this.state.grps);
-}	
+}
 
 
 render() {
@@ -31,7 +31,7 @@ render() {
 	return (
 		<div>
 		{this.state.grps.map((grp, index) =>
-			<Dropdown setgrppp={this.props.setgrpp}  title={grp} setrommm={this.props.setromm}  controlls={this.props.controls} key={index} />
+			<Dropdown setgrppp={this.props.setgrpp} visiblee={this.props.visible} title={grp} setrommm={this.props.setromm}  controlls={this.props.controls} key={index} />
 		)}
 		
 		</div>);

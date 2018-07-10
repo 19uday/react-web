@@ -9,17 +9,48 @@ body {
    min-height: 100%;
    width: 100%;
 }
+
+.controls{position: relative;}
+
+.groupbutton {
+     line-height: 12px;
+     width: 18px;
+     font-size:20px;
+     margin-top: 1px;
+     margin-right: 2px;
+     position:absolute;
+     top:0;
+     right:0;
+ }
+
+.controlcontainer{
+margin: 20px auto;
+width: 50%;
+        border: 1px solid #ddd;
+        border-radius: 34px;
+
+}
+
+.control{
+
+}
+
+.switch.checkbox{
+align-items: center;}
+
+
+
 .menubutton{text-align:left;}
 
 .conttable{
 text-align:  center;}
 button{width:50%;}
 
+
 table, td, th {    
     border: 1px solid #ddd;
     text-align: center;
-	    width:70%; 
-    margin-left:15%; 
+	      margin-left:15%; 
     margin-right:15%;
 }
 

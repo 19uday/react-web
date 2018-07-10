@@ -19,7 +19,7 @@ componentWillMount(){
 console.log(this.props.currentg);
 console.log(this.props.current);
 for(i=0;i<len;i++)
-{if(this.props.currentg.grp === this.props.controll[i].group)
+{if(this.props.currentg === this.props.controll[i].group)
 	{if(this.props.current.room === this.props.controll[i].room)
 		{
 			this.state.arra.push(this.props.controll[i]);
@@ -30,12 +30,15 @@ for(i=0;i<len;i++)
 
 render(){
 return(
-	 <table className="controltable">
+	<div className="controls">
+		<div className="groupbutton fa fa-calendar"></div>
+	 <div className="controlcontainer">
     {this.state.arra.map((control, index) => (
         <Switch controlll={control} key={index} socket={this.props.socket}/>
     ))}
 	  
-    </table>);}}
+</div>    </div>);}}
 export default Controls;
 
-	
+
+

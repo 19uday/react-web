@@ -14,14 +14,14 @@ render() {
  
     if (this.props.menuVisibility) {
       visibility = "show";
+	
     }
  
     return (
 
       <div id="flyoutMenu"
-           onMouseDown={this.props.handleMouseDown} 
            className={visibility}>
-                        <Groups controls={this.props.controls} setromm={this.props.setrom} setgrpp={this.props.setgrp} key={this.props.key}/>  
+                        <Groups controls={this.props.controls} visible={this.props.handleMouseDown} setromm={this.props.setrom} setgrpp={this.props.setgrp} key={this.props.key}/>  
                         
     </div>		);
     

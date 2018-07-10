@@ -36,16 +36,16 @@ componentWillMount(){
 			}console.log(this.state.arry);
 		}
 
-__onclick(room){
+__onclick(e,room){
 	this.props.setrommmm(room);
+this.props.visibleee(e);
 }
-
 
 render(){
 return(
 	 <div>
     {this.state.arry.map((room, index) => (
-        <button onClick={(e) => this.__onclick({room})} key={index}><font color="black">{room}</font></button>
+       <button className="roombutton" onClick={(e) => this.__onclick(e,{room})} key={index}><font color="black">{room}</font></button>
     ))}
     </div>);}
 
